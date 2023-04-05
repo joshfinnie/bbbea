@@ -15,9 +15,6 @@ While we are a test-driven engineering team, we understand take-home assessments
 time-consuming and do not expect unit tests for this project, though if you'd like to write some
 by all means feel free!
 
-**Please add comments or update this readme with some next steps you would take if you had more
-time.**
-
 ## Data Constraints
 
 There is a JSON Schema that describes the format of incoming API request bodies.
