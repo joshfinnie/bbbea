@@ -9,43 +9,58 @@ request structure.
 We use this test to gain insight into your approach when solving a general problem, and to
 gauge your familiarity with Django and its related dependencies. So if you are unable to complete
 all the requirements due to time constraints or other issues with the local environment, please
-submit your partial work. Consider adding comments or a readme with some next steps you would take
-if you had more time.
+submit your partial work.
 
 While we are a test-driven engineering team, we understand take-home assessments can be
 time-consuming and do not expect unit tests for this project, though if you'd like to write some
 by all means feel free!
 
+**Please add comments or update this readme with some next steps you would take if you had more
+time.**
+
 ## Data Constraints
 
 There is a JSON Schema that describes the format of incoming API request bodies.
 [It can be found  here](files/schema.json). You may use it to validate the requests.
-**Alternative validation methods are allowed**.
+**Alternative validation methods, such as serialization, are allowed**.
 
 Each object record will be part of an array and will look something like this:
 ```json
 {
-  "object_id": "0fadf66d045648bfa880d7d07af203bb",
-  "data": [
+  "batch_id": "71a8a97591894dda9ea1a372c89b7987",
+  "objects": [
     {
-      "key": "type",
-      "value": "shoe"
+      "object_id": "d6f983a8905e48f29ad480d3f5969b52",
+      "data": [
+        {
+          "key": "type",
+          "value": "shoe"
+        },
+        {
+          "key": "color",
+          "value": "purple"
+        }
+      ]
     },
     {
-      "key": "color",
-      "value": "blue"
-    },
-    {
-      "key": "demo",
-      "value": true
-    },
-    {
-      "key": "cost",
-      "value": 20.34
+      "object_id": "1125528d300d4538a33069a9456df4e8",
+      "data": [
+        {
+          "key": "fizz",
+          "value": "buzz"
+        }
+      ]
     }
   ]
 }
 ```
+
+Object records will contain a `data` array consisting of a random assortment of `key` and `value`
+pairs. The values in both `key` and `value` are not normalized, but will always be strings.
+
+`object_id` fields should be treated as unique.
+
+The `batch_id` value for a submitted Object should be associated to the created Object in some way.
 
 Example request bodies can be found in [files directory](files)
 
@@ -68,11 +83,17 @@ two-hour allotment, please indicate how much time you used in your repo's README
 
 ## Submission
 
-After finishing the requirements, or reaching your time constraints, please document any unfinished
-work you would have completed if given more time. Feel free to add any additional information you'd
-like us to know about your assessment as well (code documentation, decision process for a specific
-design choice etc). Once completed please email your point of contact at Blue Bite a link to the
-repository.
+After finishing the requirements, or reaching your time constraints, **please document any unfinished
+work you would have completed if given more time**.
+
+Feel free to add any additional information you'd like us to know about your assessment as well
+(code documentation, decision process for a specific design choice etc).
+
+Once completed, please zip your assignment and email it to your point of contact at Blue Bite. You
+may alternatively send us a link to your published GitHub Repo.
+
+**If you choose to publish your solution, please do not fork the assessment repository.**
+
 
 ## Local Setup
 
