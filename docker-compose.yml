@@ -26,3 +26,4 @@ services:
 
     volumes:
       - './assessment:/srv/app/assessment'
+      - '.:/srv/app'
